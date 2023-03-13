@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz</title>
+  </head>
+  <body>
+    <h1>Quiz</h1>
+    <form action="/submit" method="post">
+      {% for question in questions %}
+        <h2>{{ question['text'] }}</h2>
+        <input type="text" name="{{ question['id'] }}" required>
+      {% endfor %}
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

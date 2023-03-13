@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz Results</title>
+  </head>
+  <body>
+    <h1>Quiz Results</h1>
+    <ul>
+      {% for question in questions %}
+        <li>{{ question['text'] }} - {% if question['result'] == 'correct' %}Correct{% else %}Incorrect{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+
